@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventVista - Design Your Perfect Event Venue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Page 1: Home/Selection Page -->
+        <div class="page active" id="home-page" data-page="home">
+            <header class="hero-section">
+                <div class="hero-content">
+                    <div class="device-mockup">
+                        <img src="https://storage.googleapis.com/agent-tools-images-public/generated_images/db0a59960787a41280d85a06584acac0.png" alt="Event Hall on Mobile">
+                    </div>
+                    <h1>Design Your Perfect Event Venue</h1>
+                    <p class="subtitle">Select your event type to begin creating a masterpiece.</p>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <section class="selection-form-section">
+                    <form id="event-type-form">
+                        <select id="event-type-select" required>
+                            <option value="" disabled selected>Choose Event Type...</option>
+                            <option value="Birthday">Birthday</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Reception">Reception</option>
+                            <option value="Conference">Conference</option>
+                        </select>
+                        <input type="text" id="custom-event-type" placeholder="Or specify a custom type...">
+                        <button type="submit" class="cta-button">Get Started</button>
+                    </form>
+                </section>
+
+                <section class="stats-section">
+                    <div class="stat-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>20k+</h3>
+                        <p>Happy Events</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-palette"></i>
+                        <h3>100+</h3>
+                        <p>Design Styles</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-globe"></i>
+                        <h3>50+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </section>
+                <div class="world-map">
+                     <img src="https://i.imgur.com/OIZS1gM.png" alt="World Map Graphic">
+                </div>
+            </main>
+        </div>
+
+        <!-- Page 2: Dimensions and Extras -->
+        <div class="page" id="dimensions-page" data-page="dimensions">
+            <header class="page-header">
+                <button class="back-button" data-target="home"><i class="fas fa-arrow-left"></i> Back</button>
+                <h2>Specify Venue Details</h2>
+            </header>
+            <main class="main-content">
+                <form id="dimensions-form">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="hall-area">Hall Area (sq. meters)</label>
+                            <input type="number" id="hall-area" min="1" placeholder="e.g., 500" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="stage-length">Stage Length (m)</label>
+                            <input type="number" id="stage-length" min="0" placeholder="e.g., 10" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="stage-width">Stage Width (m)</label>
+                            <input type="number" id="stage-width" min="0" placeholder="e.g., 5" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="stage-height">Stage Height (m)</label>
+                            <input type="number" id="stage-height" min="0" placeholder="e.g., 1" required>
+                        </div>
+                    </div>
+                    <h3>Extras & Add-ons</h3>
+                    <div class="extras-grid">
+                        <label class="extra-item"><input type="checkbox" name="extra" value="DJ Setup"><i class="fas fa-music"></i> DJ Setup</label>
+                        <label class="extra-item"><input type="checkbox" name="extra" value="Chair Covers"><i class="fas fa-chair"></i> Chair Covers</label>
+                        <label class="extra-item"><input type="checkbox" name="extra" value="Advanced Lighting"><i class="fas fa-lightbulb"></i> Lighting</label>
+                        <label class="extra-item"><input type="checkbox" name="extra" value="Floral Arrangements"><i class="fas fa-fan"></i> Floral</label>
+                        <label class="extra-item"><input type="checkbox" name="extra" value="Sound System"><i class="fas fa-volume-up"></i> Sound System</label>
+                    </div>
+                     <div class="input-group">
+                        <label for="other-extras">Other (comma-separated)</label>
+                        <input type="text" id="other-extras" placeholder="e.g., Smoke Machine, Projector">
+                    </div>
+                    <button type="submit" class="cta-button">Next: Select Style</button>
+                </form>
+                <section class="testimonials">
+                    <h3>What Our Clients Say</h3>
+                    <div class="testimonial-card">
+                        <p>"EventVista transformed my wedding into an absolute dream. The AI design was breathtaking!"</p>
+                        <span>- Sarah L., Wedding Client</span>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Page 3: Design Style Page -->
+        <div class="page" id="style-page" data-page="style">
+            <header class="page-header">
+                <button class="back-button" data-target="dimensions"><i class="fas fa-arrow-left"></i> Back</button>
+                <h2>Choose Your Design Style</h2>
+            </header>
+            <main class="main-content">
+                <form id="style-form">
+                    <div class="style-grid">
+                        <!-- Style Cards -->
+                        <label class="style-card">
+                            <input type="checkbox" name="style" value="Elegant">
+                            <div class="card-content">
+                                <img src="https://i.imgur.com/xO4YJv8.png" alt="Elegant Style">
+                                <h4>Elegant</h4>
+                                <p>Minimalist with soft, warm colors.</p>
+                            </div>
+                        </label>
+                        <label class="style-card">
+                            <input type="checkbox" name="style" value="Royal">
+                            <div class="card-content">
+                                <img src="https://i.imgur.com/GqJ4aHX.png" alt="Royal Style">
+                                <h4>Royal</h4>
+                                <p>Opulent designs with gold accents.</p>
+                            </div>
+                        </label>
+                        <label class="style-card">
+                            <input type="checkbox" name="style" value="Modern">
+                            <div class="card-content">
+                                <img src="https://i.imgur.com/A6gOa8L.png" alt="Modern Style">
+                                <h4>Modern</h4>
+                                <p>Sleek, sharp, and tech-inspired.</p>
+                            </div>
+                        </label>
+                        <label class="style-card">
+                            <input type="checkbox" name="style" value="Rustic">
+                             <div class="card-content">
+                                <img src="https://i.imgur.com/9iS8bWz.png" alt="Rustic Style">
+                                <h4>Rustic</h4>
+                                <p>Natural tones and wooden elements.</p>
+                            </div>
+                        </label>
+                         <label class="style-card">
+                            <input type="checkbox" name="style" value="Bohemian">
+                            <div class="card-content">
+                               <img src="https://i.imgur.com/mJ2X7qR.png" alt="Bohemian Style">
+                               <h4>Bohemian</h4>
+                               <p>Free-spirited, eclectic, and vibrant.</p>
+                            </div>
+                        </label>
+                         <label class="style-card">
+                            <input type="checkbox" name="style" value="Futuristic">
+                             <div class="card-content">
+                                <img src="https://i.imgur.com/fZbGfA6.png" alt="Futuristic Style">
+                                <h4>Futuristic</h4>
+                                <p>Neon lights and cyberpunk aesthetics.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="quality-assurance">
+                        <i class="fas fa-microchip"></i>
+                        <p>We use state-of-the-art AI to perfectly tailor designs to your specifications, ensuring a flawless result.</p>
+                    </div>
+                    <button type="submit" class="cta-button">Generate Visualization</button>
+                </form>
+            </main>
+        </div>
+
+        <!-- Page 4: Visualization Page -->
+        <div class="page" id="visualization-page" data-page="visualization">
+            <header class="page-header">
+                <button class="back-button" data-target="style"><i class="fas fa-arrow-left"></i> Back</button>
+                <h2>Your Custom Venue Design</h2>
+            </header>
+            <main class="main-content">
+                <div id="image-viewer">
+                    <div id="loading-spinner" class="hidden">
+                        <div class="spinner"></div>
+                        <p>Generating your masterpiece... Please wait.</p>
+                    </div>
+                    <img id="generated-image" src="" alt="Generated Event Venue" class="hidden">
+                    <div id="error-message" class="hidden">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Sorry, the image generation failed. Please try again.</p>
+                        <button id="retry-button" class="cta-button">Retry</button>
+                    </div>
+                </div>
+                <div class="cta-footer hidden">
+                    <button class="cta-button">Download Design</button>
+                    <button class="cta-button secondary">Contact Us</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 EventVista. All rights reserved.</p>
+            <div class="app-download-links">
+                <a href="#"><img src="https://i.imgur.com/MMx3fzg.png" alt="Download on the App Store"></a>
+                <a href="#"><img src="https://i.imgur.com/5V32hqp.png" alt="Get it on Google Play"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
